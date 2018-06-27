@@ -6,4 +6,12 @@ A starter project for node and react using JWT for authentication.
 
 * Add server and libraries
   * `touch server.js`
-  * `yarn add express jsonwebtoken`
+  * `yarn add express jsonwebtoken express-jwt`
+  * `Create express server, routes and setup JWT`
+
+## React
+
+* Add react app
+  * `yarn add create-react-app -D`
+  * `npx create-react-app client`
+  * `Set proxy in package.json`
