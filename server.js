@@ -43,14 +43,14 @@ app.use('/api', jwt({ secret, }).unless({
   path: [ '/api/auth' ],
 }));
 
-// // Express only serves static assets in production
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static('dist'));
+// Express only serves static assets in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 
-//   app.get('*', (req, res) => {
-//     res.sendFile('index.html', { root: 'dist', });
-//   });
-// }
+  app.get('*', (req, res) => {
+    res.sendFile('index.html', { root: 'client/build', });
+  });
+}
 
 const port = process.env.PORT || 5001;
 
