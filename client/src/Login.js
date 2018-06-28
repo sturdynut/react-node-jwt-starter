@@ -34,6 +34,7 @@ class Login extends React.Component {
   render() {
     return (
       <div className='login-container'>
+        <h1>Login</h1>
         <label>Username</label>
         <input type='text' onChange={this.handleUserNameChange} value={this.state.username} />
         <label>Password</label>
